@@ -1,7 +1,7 @@
-<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-8">
+<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-8 animate-fade-in-up hover:shadow-md transition-all duration-300">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
         <h3 class="text-lg font-bold text-slate-800">Riwayat Tiket Saya</h3>
-        <button onclick="openLaporModal()" class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition flex items-center shadow-sm">
+        <button onclick="openLaporModal()" class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center shadow-sm">
             <i class="fas fa-plus mr-2"></i> Buat Laporan Baru
         </button>
     </div>
