@@ -27,6 +27,30 @@
                             emerald: '#0D9488', /* 10% Accent Teal */
                             emeraldLight: '#14B8A6',
                         }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        }
                     }
                 }
             }
@@ -54,14 +78,14 @@
 <body class="bg-brand-base min-h-screen flex items-center justify-center p-4 md:p-6 lg:p-8 antialiased">
 
     <div
-        class="bg-white rounded-[2rem] shadow-2xl flex flex-col md:flex-row w-full max-w-[1100px] overflow-hidden min-h-[600px]">
+        class="bg-white rounded-[2rem] shadow-2xl flex flex-col md:flex-row w-full max-w-[1100px] overflow-hidden min-h-[600px] animate-fade-in-up">
 
-        <div class="hidden md:block md:w-1/2 relative bg-brand-navy">
+        <div class="hidden md:block md:w-1/2 relative bg-brand-navy animate-fade-in">
             <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop"
-                alt="Background IT Helpdesk" class="object-cover w-full h-full opacity-90">
+                alt="Background IT Helpdesk" class="object-cover w-full h-full opacity-90 transition-transform duration-700 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 to-brand-navy/20"></div>
 
-            <div class="absolute inset-0 flex flex-col justify-center px-12 pointer-events-none">
+            <div class="absolute inset-0 flex flex-col justify-center px-12 pointer-events-none animate-slide-in-right" style="animation-delay: 0.2s; opacity: 0;">
                 <h2 class="text-3xl font-bold text-white mb-4 leading-tight">Pusat Layanan Bantuan<br>dan Pengaduan
                     Terpadu.
                 </h2>
@@ -70,7 +94,7 @@
             </div>
         </div>
 
-        <div class="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative">
+        <div class="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative animate-slide-in-left" style="animation-delay: 0.1s; opacity: 0;">
 
             <div class="flex items-center gap-3 mb-10">
                 <span class="font-extrabold text-2xl text-brand-navy tracking-tight">
@@ -96,7 +120,7 @@
                     <label
                         class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 ml-1">Username</label>
                     <input type="text" name="username"
-                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-emerald/40 focus:border-brand-emerald transition-all"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-emerald/40 focus:border-brand-emerald focus:bg-white hover:bg-slate-100 transition-all duration-300"
                         placeholder="Enter your username" required>
                 </div>
 
@@ -105,7 +129,7 @@
                         class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 ml-1">Password</label>
                     <div class="relative flex items-center">
                         <input type="password" name="password" id="passwordInput"
-                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-emerald/40 focus:border-brand-emerald transition-all"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-emerald/40 focus:border-brand-emerald focus:bg-white hover:bg-slate-100 transition-all duration-300"
                             placeholder="Enter password" required>
                         <div id="togglePassword"
                             class="absolute right-4 text-gray-400 cursor-pointer hover:text-brand-emerald transition-colors">
@@ -124,7 +148,7 @@
 
                 <div class="pt-4">
                     <button type="submit"
-                        class="w-full bg-brand-emerald hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-brand-emerald/30 transform hover:-translate-y-0.5">
+                        class="w-full bg-brand-emerald hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-emerald/30 transform hover:-translate-y-1 hover:shadow-brand-emerald/50 hover:scale-[1.02] active:scale-95">
                         Login
                     </button>
                 </div>
