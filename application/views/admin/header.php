@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT HelpDesk - <?php echo $title; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -19,10 +41,12 @@
 <body class="antialiased">
     <div class="min-h-screen flex bg-slate-50 relative overflow-hidden">
         <!-- Mobile Sidebar Overlay -->
-        <div id="sidebarOverlay" class="fixed inset-0 bg-slate-900/50 z-40 hidden md:hidden" onclick="toggleSidebar()"></div>
+        <div id="sidebarOverlay" class="fixed inset-0 bg-slate-900/50 z-40 hidden md:hidden" onclick="toggleSidebar()">
+        </div>
 
         <!-- Sidebar -->
-        <div id="sidebar" class="w-64 bg-slate-900 text-white flex flex-col fixed inset-y-0 left-0 z-50 transform -translate-x-full md:relative md:translate-x-0 transition-all duration-300 ease-in-out">
+        <div id="sidebar"
+            class="w-64 bg-slate-900 text-white flex flex-col fixed inset-y-0 left-0 z-50 transform -translate-x-full md:relative md:translate-x-0 transition-all duration-300 ease-in-out">
             <div class="p-6 text-xl font-bold border-b border-slate-800 flex items-center justify-between">
                 <div class="leading-tight">
                     <span class="block text-white">IT<span class="text-emerald-400">SmartDesk</span></span>
@@ -130,11 +154,13 @@
         <!-- Main Content -->
         <div class="flex-1 flex flex-col h-screen overflow-hidden w-full md:w-auto">
             <!-- Mobile Header with Hamburger -->
-            <div class="md:hidden bg-white border-b border-slate-200 p-4 flex items-center justify-between shadow-sm flex-shrink-0 z-30">
+            <div
+                class="md:hidden bg-white border-b border-slate-200 p-4 flex items-center justify-between shadow-sm flex-shrink-0 z-30">
                 <div class="font-bold text-lg text-slate-800">
                     IT<span class="text-emerald-600">SmartDesk</span>
                 </div>
-                <button onclick="toggleSidebar()" class="text-slate-500 hover:text-emerald-600 focus:outline-none p-2 rounded-lg bg-slate-100 transition-colors">
+                <button onclick="toggleSidebar()"
+                    class="text-slate-500 hover:text-emerald-600 focus:outline-none p-2 rounded-lg bg-slate-100 transition-colors">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -145,7 +171,7 @@
                     function toggleSidebar() {
                         const sidebar = document.getElementById('sidebar');
                         const overlay = document.getElementById('sidebarOverlay');
-                        
+
                         if (window.innerWidth < 768) {
                             if (sidebar.classList.contains('-translate-x-full')) {
                                 sidebar.classList.remove('-translate-x-full');
