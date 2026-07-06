@@ -1,13 +1,13 @@
 
 
-<div class="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
     <div>
         <h2 class="text-2xl font-bold text-slate-800">Daftar Tugas</h2>
         <p class="text-slate-500 text-sm mt-1">Kelola dan selesaikan tiket bantuan yang ditugaskan kepada Anda.</p>
     </div>
 </div>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
     <?php if(empty($tickets)): ?>
     <div class="col-span-full py-16 px-4 text-center bg-white rounded-2xl shadow-sm border border-slate-200">
         <div class="w-24 h-24 bg-emerald-50 text-emerald-400 rounded-full flex items-center justify-center text-5xl mx-auto mb-4">
