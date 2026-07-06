@@ -1,12 +1,12 @@
-<div class="mb-8">
+<div class="mb-8 animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
     <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Dashboard Admin</h2>
     <p class="text-slate-500">Ringkasan tiket pelayanan IT dan pemantauan kinerja staf secara langsung.</p>
 </div>
 
 <!-- Stat Blocks -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
     <!-- Stat 1 -->
-    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group">
+    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
         <div
             class="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-amber-100 transition-colors duration-500">
         </div>
@@ -23,7 +23,7 @@
     </div>
 
     <!-- Stat 2 -->
-    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group">
+    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
         <div
             class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-blue-100 transition-colors duration-500">
         </div>
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Stat 3 -->
-    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group">
+    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
         <div
             class="absolute top-0 right-0 w-24 h-24 bg-emerald-600/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-emerald-600/10 transition-colors duration-500">
         </div>
@@ -59,10 +59,10 @@
 </div>
 
 <!-- Chart & Insight Section (Moved from Laporan) -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fade-in-up" style="animation-delay: 0.3s; opacity: 0;">
     <!-- Chart -->
     <div
-        class="lg:col-span-1 bg-white border border-slate-200 rounded-3xl p-6 flex flex-col items-center justify-center shadow-sm relative overflow-hidden">
+        class="lg:col-span-1 bg-white border border-slate-200 rounded-3xl p-6 flex flex-col items-center justify-center shadow-sm relative overflow-hidden hover:shadow-md transition-shadow duration-300">
         <h4 class="font-extrabold text-slate-900 mb-6 text-center w-full border-b border-slate-100 pb-3">Status
             Penanganan Tiket</h4>
         <div class="w-full max-w-[200px] aspect-square relative">
@@ -71,7 +71,7 @@
     </div>
 
     <!-- Top Assets -->
-    <div class="lg:col-span-2 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+    <div class="lg:col-span-2 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
         <h4 class="font-extrabold text-slate-900 mb-4 text-center w-full border-b border-slate-100 pb-3">Top 5 Aset
             Sering Rusak</h4>
         <?php if (empty($top_assets)): ?>
@@ -100,7 +100,7 @@
 </div>
 
 <!-- Live Monitoring Table -->
-<div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-8 relative">
+<div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-8 relative animate-fade-in-up hover:shadow-md transition-shadow duration-300" style="animation-delay: 0.4s; opacity: 0;">
     <div
         class="p-6 md:p-8 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-50/50 gap-4">
         <div>
