@@ -43,18 +43,6 @@
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-2">Username</label>
-                        <input type="text" name="username" value="<?php echo $user->username; ?>" required
-                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-slate-700">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-2">Password Baru <span class="text-xs text-slate-400 font-normal">(Opsional)</span></label>
-                        <input type="password" name="password" placeholder="Kosongkan jika tidak ingin diubah"
-                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-slate-700">
-                    </div>
-                    
-                    <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Ubah Foto Profil <span class="text-xs text-slate-400 font-normal">(Opsional)</span></label>
                         <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg"
                             class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-medium text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-bold file:bg-emerald-100 file:text-emerald-700 hover:file:bg-emerald-200 transition-all cursor-pointer">
