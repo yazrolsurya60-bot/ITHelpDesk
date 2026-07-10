@@ -185,6 +185,3 @@
                         }
                     }
                 </script>
-                <div class="mb-6">
-                    <h2 class="text-2xl font-bold text-slate-800"><?php echo $title; ?></h2>
-                </div>
