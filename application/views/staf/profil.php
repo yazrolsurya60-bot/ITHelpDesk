@@ -47,14 +47,7 @@
                             class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-slate-700">
                     </div>
                     
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-2">Username</label>
-                        <input type="text" name="username" value="<?php echo $user->username; ?>" required
-                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-slate-700">
-                    </div>
-                    
 
-                    
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Ubah Foto Profil <span class="text-xs text-slate-400 font-normal">(Opsional)</span></label>
                         <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg"
