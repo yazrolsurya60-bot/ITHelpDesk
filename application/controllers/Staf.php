@@ -91,13 +91,8 @@ class Staf extends CI_Controller {
     {
         $user_id = $this->session->userdata('user_id');
         $data = [
-            'nama_lengkap' => $this->input->post('nama_lengkap'),
-            'username' => $this->input->post('username')
+            'nama_lengkap' => $this->input->post('nama_lengkap')
         ];
-        
-        if (!empty($this->input->post('password'))) {
-            $data['password'] = md5($this->input->post('password'));
-        }
         
         // Handle Photo Upload
         if (!empty($_FILES['foto']['name'])) {
